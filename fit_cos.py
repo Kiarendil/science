@@ -3,12 +3,12 @@ import ROOT
 from math import sqrt
 from array import array
 
-f = ROOT.TFile('B_cut_.root', 'read')  # file where to read from
+f = ROOT.TFile('B_cut_cos.root', 'read')  # file where to read from
 
 signals, signals_err = array('d'), array('d')
 
-for i in range(1, 8):
-    pname = 'Pic_mass_bin_' + str(i) + '.png'
+for i in range(1, 6):
+    pname = 'Pic_mass_bin_cos_' + str(i) + '.png'
 
     histname = "hBmas" + str(i)
 
@@ -147,23 +147,21 @@ print(signals_err)
 
 sign = array('d')
 
-for i in range(0, 7):
+for i in range(0, 5):
     sign.append(signals[i] / signals_err[i])
 
 cuts = array('d')
-cuts.append(25)
-cuts.append(20)
-cuts.append(15)
-cuts.append(10)
-cuts.append(7)
-cuts.append(5)
-cuts.append(3)
+cuts.append(0.99)
+cuts.append(0.995)
+cuts.append(0.999)
+cuts.append(0.9995)
+cuts.append(0.9999)
 
 print(cuts, sign)
 
-graph = ROOT.TGraph(7, cuts, sign)
+graph = ROOT.TGraph(5, cuts, sign)
 
-ff = ROOT.TFile("graf.root", "recreate")
+ff = ROOT.TFile("graf_cos.root", "recreate")
 
 graph.Write()
 
