@@ -3,7 +3,7 @@ import ROOT
 import glob
 
 ch = ROOT.TChain("mytree")
-MyFileNames12 = glob.glob('./data.root')
+MyFileNames12 = glob.glob('../../data/data.root')
 for fName in MyFileNames12:
     ch.Add(fName)
 
@@ -26,7 +26,7 @@ hBmas7 = ROOT.TH1F('hBmas7', 'B_mass', 150, 5.27963 - 0.19, 5.27963 + 0.18)
 for i in range(1, 8):
     name = 'hB_mass' + str(i)
     # print(name)
-    hBmass.append(ROOT.TH1F(name, 'B_mass_Cjp', 150, 5.27963 - 0.19, 5.27963 + 0.18))
+    hBmass.append(ROOT.TH1F(name, 'B_mass_Cjp', 150, 5.27963 - 0.179, 5.27963 + 0.18))
 
 cut_cos = 'B_pvcos2_Cjp > 0.9995 '
 
@@ -56,7 +56,7 @@ ch.Draw('B_mass_Cjp >> hBmas5', cuts[4])
 ch.Draw('B_mass_Cjp >> hBmas6', cuts[5])
 ch.Draw('B_mass_Cjp >> hBmas7', cuts[6])
 
-ff = ROOT.TFile("B_cut_.root", "recreate")
+ff = ROOT.TFile("../../data/B_cut_sign.root", "recreate")
 
 hBmas1.Write()
 hBmas2.Write()

@@ -3,16 +3,16 @@ import ROOT
 from math import sqrt
 from array import array
 
-f = ROOT.TFile('B_cut_.root', 'read')  # file where to read from
+f = ROOT.TFile('../data/B_cut_sign.root', 'read')  # file where to read from
 
 signals, signals_err = array('d'), array('d')
 
 for i in range(1, 8):
-    pname = 'Pic_mass_bin_' + str(i) + '.png'
+    pname = 'Pic_mass_bin_sign' + str(i) + '.png'
 
     histname = "hBmas" + str(i)
 
-    mbmin = 5.06
+    mbmin = 5.105
     mbmax = 5.46
     mbNbins = 150  # range of plot + N(bins)
 
@@ -21,7 +21,7 @@ for i in range(1, 8):
 
     canvW = 1000
     canvH = 600
-    _PicName = 'pictures/' + pname  # name of file with picture
+    _PicName = '../pictures/' + pname  # name of file with picture
 
     fit_M0 = 5.27963
     fit_Sigma0 = 0.015
@@ -146,6 +146,7 @@ print(signals)
 print(signals_err)
 
 sign = array('d')
+signals_err = array('d', [113.0, 360.0, 374.0, 386.0, 391.0, 206.0, 206.0])
 
 for i in range(0, 7):
     sign.append(signals[i] / signals_err[i])
