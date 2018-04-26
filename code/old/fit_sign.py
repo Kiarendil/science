@@ -3,7 +3,7 @@ import ROOT
 from math import sqrt
 from array import array
 
-f = ROOT.TFile('../data/B_cut_sign.root', 'read')  # file where to read from
+f = ROOT.TFile('../../data/B_cut_sign.root', 'read')  # file where to read from
 
 signals, signals_err = array('d'), array('d')
 
@@ -21,7 +21,7 @@ for i in range(1, 8):
 
     canvW = 1000
     canvH = 600
-    _PicName = '../pictures/' + pname  # name of file with picture
+    _PicName = '../../pictures/' + pname  # name of file with picture
 
     fit_M0 = 5.27963
     fit_Sigma0 = 0.015

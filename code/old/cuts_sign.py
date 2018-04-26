@@ -15,13 +15,13 @@ for v in [a.GetName() for a in ch.GetListOfLeaves()]:
 
 hBmass = []
 
-hBmas1 = ROOT.TH1F('hBmas1', 'B_mass', 150, 5.27963 - 0.19, 5.27963 + 0.18)
-hBmas2 = ROOT.TH1F('hBmas2', 'B_mass', 150, 5.27963 - 0.19, 5.27963 + 0.18)
-hBmas3 = ROOT.TH1F('hBmas3', 'B_mass', 150, 5.27963 - 0.19, 5.27963 + 0.18)
-hBmas4 = ROOT.TH1F('hBmas4', 'B_mass', 150, 5.27963 - 0.19, 5.27963 + 0.18)
-hBmas5 = ROOT.TH1F('hBmas5', 'B_mass', 150, 5.27963 - 0.19, 5.27963 + 0.18)
-hBmas6 = ROOT.TH1F('hBmas6', 'B_mass', 150, 5.27963 - 0.19, 5.27963 + 0.18)
-hBmas7 = ROOT.TH1F('hBmas7', 'B_mass', 150, 5.27963 - 0.19, 5.27963 + 0.18)
+hBmas1 = ROOT.TH1F('hBmas1', 'B_mass', 150, 5.27963 - 0.179, 5.27963 + 0.18)
+hBmas2 = ROOT.TH1F('hBmas2', 'B_mass', 150, 5.27963 - 0.179, 5.27963 + 0.18)
+hBmas3 = ROOT.TH1F('hBmas3', 'B_mass', 150, 5.27963 - 0.179, 5.27963 + 0.18)
+hBmas4 = ROOT.TH1F('hBmas4', 'B_mass', 150, 5.27963 - 0.179, 5.27963 + 0.18)
+hBmas5 = ROOT.TH1F('hBmas5', 'B_mass', 150, 5.27963 - 0.179, 5.27963 + 0.18)
+hBmas6 = ROOT.TH1F('hBmas6', 'B_mass', 150, 5.27963 - 0.179, 5.27963 + 0.18)
+hBmas7 = ROOT.TH1F('hBmas7', 'B_mass', 150, 5.27963 - 0.179, 5.27963 + 0.18)
 
 for i in range(1, 8):
     name = 'hB_mass' + str(i)

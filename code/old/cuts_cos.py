@@ -15,11 +15,11 @@ for v in [a.GetName() for a in ch.GetListOfLeaves()]:
 
 hBmass = []
 
-hBmas1 = ROOT.TH1F('hBmas1', 'B_mass', 150, 5.27963 - 0.19, 5.27963 + 0.18)
-hBmas2 = ROOT.TH1F('hBmas2', 'B_mass', 150, 5.27963 - 0.19, 5.27963 + 0.18)
-hBmas3 = ROOT.TH1F('hBmas3', 'B_mass', 150, 5.27963 - 0.19, 5.27963 + 0.18)
-hBmas4 = ROOT.TH1F('hBmas4', 'B_mass', 150, 5.27963 - 0.19, 5.27963 + 0.18)
-hBmas5 = ROOT.TH1F('hBmas5', 'B_mass', 150, 5.27963 - 0.19, 5.27963 + 0.18)
+hBmas1 = ROOT.TH1F('hBmas1', 'B_mass', 150, 5.27963 - 0.179, 5.27963 + 0.18)
+hBmas2 = ROOT.TH1F('hBmas2', 'B_mass', 150, 5.27963 - 0.179, 5.27963 + 0.18)
+hBmas3 = ROOT.TH1F('hBmas3', 'B_mass', 150, 5.27963 - 0.179, 5.27963 + 0.18)
+hBmas4 = ROOT.TH1F('hBmas4', 'B_mass', 150, 5.27963 - 0.179, 5.27963 + 0.18)
+hBmas5 = ROOT.TH1F('hBmas5', 'B_mass', 150, 5.27963 - 0.179, 5.27963 + 0.18)
 
 for i in range(1, 8):
     name = 'hB_mass' + str(i)
@@ -28,13 +28,8 @@ for i in range(1, 8):
 
 cut_sign = 'B_pvdistsignif2_Cjp > 5'
 
-cut_cos = []
-
-cut_cos.append('&& abs(B_pvcos2_Cjp - 1) < 0.01')
-cut_cos.append('&& abs(B_pvcos2_Cjp - 1) < 0.005')
-cut_cos.append('&& abs(B_pvcos2_Cjp - 1) < 0.001')
-cut_cos.append('&& abs(B_pvcos2_Cjp - 1) < 0.0005')
-cut_cos.append('&& abs(B_pvcos2_Cjp - 1) < 0.0001')
+cut_cos = ['&& abs(B_pvcos2_Cjp - 1) < 0.01', '&& abs(B_pvcos2_Cjp - 1) < 0.005', '&& abs(B_pvcos2_Cjp - 1) < 0.001',
+           '&& abs(B_pvcos2_Cjp - 1) < 0.0005', '&& abs(B_pvcos2_Cjp - 1) < 0.0001']
 
 cuts = []
 
