@@ -42,8 +42,8 @@ PDG_B1_MASS = 5.7249
 PDG_B2ST_MASS = 5.739
 PDG_DMBstB = 0.04538
 
-bmin = 5.4
-bmax = 6.2
+bmin = 5.9
+bmax = 6.8
 binN = 100
 # bmin = 5.77;   __bmax = 5.795; binN = 25
 
@@ -52,7 +52,7 @@ binN = 100
 tt1 = 0.0
 tt2 = 1.0
 
-mbu = ROOT.RooRealVar("mbu", "M(bu), [GeV]", 5.1, 5.5)
+mbu = ROOT.RooRealVar("mbu", "M(bu), [GeV]", 5.9, 6.8)
 mjpsi = ROOT.RooRealVar("mjpsi", "M(psi), [GeV]", 2.8, 4.0)
 lacos = ROOT.RooRealVar("lacos", "cos(theta)", -1.1, 1.1)
 lads = ROOT.RooRealVar("lads", "DetSign", 0.0, 10000)
